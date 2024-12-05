@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmark</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <div class="container p-3 my-5">
+      <div class="heading text-center">
+        <span class="">Bookmarker</span>
+      </div>
+
+      <h2 class="text-center py-4">
+        <i class="fa-solid fa-bookmark"></i>
+        Bookmark your favorite
+        <i class="fa-solid fa-bookmark"></i>
+      </h2>
+
+      <div class="form fs-6 fw-bold">
+        <label for="site-name" class="pb-2">
+          <i class="fa-solid fa-book-bookmark me-2"></i>
+          Site Name
+        </label>
+        <input
+          oninput="validateInput(this,'msgName')"
+          type="text"
+          class="form-control mb-2 p-2 rounded-2"
+          id="siteName"
+          placeholder="Bookmark Name"
+        />
+        <p id="msgName" class="alert alert-warning d-none">
+          Site name must contain at least 3 characters
+        </p>
+        <label for="site-url" class="pb-2">
+          <i class="fa-solid fa-link"></i>
+          Site URL
+        </label>
+        <input
+          oninput="validateInput(this,'msgUrl')"
+          type="text"
+          class="form-control"
+          id="siteUrl"
+          placeholder="Website URL"
+        />
+        <p id="msgUrl" class="alert alert-warning d-none">
+          Site URL must be a valid one
+        </p>
+        <button
+          id="submit"
+          class="px-5 py-2 text-white fs-6 mt-4 d-flex mx-auto rounded-2"
+        >
+          Submit
+        </button>
+      </div>
+
+      <table class="text-center w-100 mt-3">
+        <thead>
+          <th class="py-2">index</th>
+          <th>SiteName</th>
+          <th>visit</th>
+          <th>Delete</th>
+        </thead>
+        <tbody id="display-data"></tbody>
+      </table>
+    </div>
+
+    <div
+      id="alertBox"
+      class="alertBox position-absolute start-0 top-0 w-100 h-100 d-flex justify-content-center align-items-center d-none"
+    >
+      <div class="inner w-50 mx-auto p-3 shadow-lg bg-white">
+        <div class="icon d-flex justify-content-between">
+          <div class="group d-flex gap-2">
+            <div class="circle circle-1"></div>
+            <div class="circle circle-2"></div>
+            <div class="circle circle-3"></div>
+          </div>
+          <button id="closeBtn" class="border-0 bg-transparent">
+            <i class="fa-solid fa-x fw-bold fs-5"></i>
+          </button>
+        </div>
+
+        <div class="content">
+          <p class="mt-3 pb-2 fs-5">
+            Site Name or Url is not valid, Please follow the rules below :
+          </p>
+          <ol class="rul es list-unstyled m-0">
+            <li class="fs-6">
+              <i class="fa-regular fa-circle-right p-2"></i>Site name must
+              contain at least 3 characters
+            </li>
+            <li class="fs-6">
+              <i class="fa-regular fa-circle-right p-2"></i>Site URL must be a
+              valid one
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

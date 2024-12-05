@@ -1,0 +1,86 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+body {
+  background-color: #f7ecde;
+}
+.heading {
+  padding-bottom: 50px;
+  border-bottom: 2px dotted black;
+}
+span {
+  font-family: "Pacifico", cursive;
+  color: #352e28;
+  font-size: 50px;
+  font-weight: 500;
+  line-height: 60px;
+  position: relative;
+}
+span::after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 25%;
+  bottom: 10px;
+  left: 0;
+  background-color: #fec260;
+  transition: all 0.3s ease;
+}
+span:hover::after {
+  height: 50%;
+}
+h2 {
+  font-family: "Righteous", cursive;
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 30px;
+  color: #3ca55c;
+}
+.form {
+  font-family: "PT Sans Caption", sans-serif;
+  padding-bottom: 30px;
+  border-bottom: 2px dotted black;
+}
+.form-control:focus {
+  border-color: #d99c39 !important;
+  box-shadow: 0 0 0 0.25rem #fec26055 !important;
+}
+.form button {
+  background-color: #d1512d;
+  border: none;
+  transition: all 0.3s ease;
+}
+.form button:hover {
+  background-color: #bb4120;
+}
+table {
+  font-family: "PT Sans Caption", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  background-color: #fff !important;
+}
+.alertBox {
+  border: 2px solid gold;
+}
+.alertBox .circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+.alertBox .circle-1 {
+  background-color: #f15f5d;
+}
+.alertBox .circle-2 {
+  background-color: #febe2e;
+}
+.alertBox .circle-3 {
+  background-color: #4db748;
+}
